@@ -17,7 +17,7 @@ spec:
       serviceAccountName: cadvisor
       containers:
       - name: cadvisor
-        image: gcr.io/cadvisor/cadvisor:v0.39.0
+        image: gcr.io/cadvisor/cadvisor:v0.44.0
         resources:
           requests:
             memory: 400Mi
@@ -41,6 +41,9 @@ spec:
         - name: disk
           mountPath: /dev/disk
           readOnly: true
+        - name: kmsg
+          #readOnly: true
+          mountPath: /dev/kmsg
         ports:
           - name: http
             containerPort: 8080
@@ -63,3 +66,7 @@ spec:
       - name: disk
         hostPath:
           path: /dev/disk
+      - name: kmsg
+        hostPath:
+          path: /dev/kmsg
+      

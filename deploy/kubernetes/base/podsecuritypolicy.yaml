@@ -3,6 +3,7 @@ kind: PodSecurityPolicy
 metadata:
   name: cadvisor
 spec:
+  privileged: true
   seLinux:
     rule: RunAsAny
   supplementalGroups:
@@ -19,3 +20,4 @@ spec:
   - pathPrefix: "/sys"
   - pathPrefix: "/var/lib/docker"
   - pathPrefix: "/dev/disk"
+  - pathPrefix: "/dev/kmsg"

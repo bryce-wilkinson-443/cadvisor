@@ -14,10 +14,11 @@ spec:
     rule: RunAsAny
   volumes:
   - '*'
-  allowedHostPaths:
-  - pathPrefix: "/"
-  - pathPrefix: "/var/run"
-  - pathPrefix: "/sys"
-  - pathPrefix: "/var/lib/docker"
-  - pathPrefix: "/dev/disk"
-  - pathPrefix: "/dev/kmsg"
+  #allowedHostPaths:
+  #- pathPrefix: "/"
+  #- pathPrefix: "/var/run"
+  #- pathPrefix: "/sys"
+  #- pathPrefix: "/var/lib/docker"
+  #- pathPrefix: "/dev/disk"
+  #- pathPrefix: "/dev/kmsg"
+  #- pathPrefix: "/sys/fs/cgroup"
